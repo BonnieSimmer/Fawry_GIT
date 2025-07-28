@@ -1,0 +1,351 @@
+           .-------------------------:                    bonniesimmer@Cachyos-Nour
+          .+=========================.                    -------------------------
+         :++===++==================-       :++-           OS: CachyOS x86_64
+        :*++====+++++=============-        .==:           Host: G5 5500
+       -*+++=====+***++==========:                        Kernel: Linux 6.15.5-2-cachyos
+      =*++++========------------:                         Uptime: 45 mins
+     =*+++++=====-                     ...                Packages: 1982 (pacman), 17 (flatpak)
+   .+*+++++=-===:                    .=+++=:              Shell: fish 4.0.2
+  :++++=====-==:                     -*****+              Display (SHP14C6): 1920x1080 @ 240 Hz (as 1601x900) in 16" [Built-in]
+ :++========-=.                      .=+**+.              DE: KDE Plasma 6.4.2
+.+==========-.                          .                 WM: KWin (Wayland)
+ :+++++++====-                                .--==-.     WM Theme: Breeze
+  :++==========.                             :+++++++:    Theme: Breeze (Light) [Qt], Breeze [GTK2/3]
+   .-===========.                            =*****+*+    Icons: breeze [Qt], breeze [GTK2/3/4]
+    .-===========:                           .+*****+:    Font: Noto Sans (10pt) [Qt], Noto Sans (10pt) [GTK2/3/4]
+      -=======++++:::::::::::::::::::::::::-:  .---:      Cursor: breeze (36px)
+       :======++++====+++******************=.             Terminal: konsole 25.4.3
+        :=====+++==========++++++++++++++*-               CPU: Intel(R) Core(TM) i7-10750H (12) @ 5.00 GHz
+         .====++==============++++++++++*-                GPU 1: NVIDIA GeForce RTX 2060 Mobile [Discrete]
+          .===+==================+++++++:                 GPU 2: Intel UHD Graphics @ 1.15 GHz [Integrated]
+           .-=======================+++:                  Memory: 4.44 GiB / 15.38 GiB (29%)
+             ..........................                   Swap: 1.40 GiB / 15.38 GiB (9%)
+                                                          Disk (/): 90.64 GiB / 953.57 GiB (10%) - btrfs
+                                                          Local IP (wlan0): ***********
+                                                          Battery (DELL 72WGV07): 100% [AC Connected]
+                                                          Locale: en_US.UTF-8
+
+                                                                                  
+                                                                                  
+~
+❯ cd Courses/Fawry/Week_1/VersionControlSystemsTask/
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask
+❯ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /home/bonniesimmer/Courses/Fawry/Week_1/VersionControlSystemsTask/.git/
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask master
+❯ git branch -h
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --[no-]verbose    show hash and subject, give twice for upstream branch
+    -q, --[no-]quiet      suppress informational messages
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --[no-]set-upstream-to <upstream>
+                          change the upstream info
+    --[no-]unset-upstream unset the upstream info
+    --[no-]color[=<when>] use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --[no-]abbrev[=<n>]   use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --[no-]delete     delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --[no-]move       move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    --[no-]omit-empty     do not output a newline after empty formatted refs
+    -c, --[no-]copy       copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --[no-]list       list branch names
+    --[no-]show-current   show current branch name
+    --[no-]create-reflog  create the branch's reflog
+    --[no-]edit-description
+                          edit the description for the branch
+    -f, --[no-]force      force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --[no-]column[=<style>]
+                          list branches in columns
+    --[no-]sort <key>     field name to sort on
+    --[no-]points-at <object>
+                          print only branches of the object
+    -i, --[no-]ignore-case
+                          sorting and filtering are case insensitive
+    --[no-]recurse-submodules
+                          recurse through submodules
+    --[no-]format <format>
+                          format to use for the output
+
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask master
+❯ git branch develop
+fatal: not a valid object name: 'master'
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask master
+❯ git branch -m develop
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ echo line1 > file1
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ echo line2> file2
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ ls
+drwxr-xr-x - bonniesimmer 28 Jul 14:23  .git
+.rw-r--r-- 6 bonniesimmer 28 Jul 14:24  file1
+.rw-r--r-- 6 bonniesimmer 28 Jul 14:24  file2
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git show
+fatal: your current branch 'develop' does not have any commits yet
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git status
+On branch develop
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1
+        file2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git commit -h
+usage: git commit [-a | --interactive | --patch] [-s] [-v] [-u[<mode>]] [--amend]
+                  [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>]
+                  [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+                  [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+                  [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+                  [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                  [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]
+                  [--] [<pathspec>...]
+
+    -q, --[no-]quiet      suppress summary after successful commit
+    -v, --[no-]verbose    show diff in commit message template
+
+Commit message options
+    -F, --[no-]file <file>
+                          read message from file
+    --[no-]author <author>
+                          override author for commit
+    --[no-]date <date>    override date for commit
+    -m, --[no-]message <message>
+                          commit message
+    -c, --[no-]reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --[no-]reuse-message <commit>
+                          reuse message from specified commit
+    --[no-]fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --[no-]squash <commit>
+                          use autosquash formatted message to squash specified commit
+    --[no-]reset-author   the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --[no-]signoff    add a Signed-off-by trailer
+    -t, --[no-]template <file>
+                          use specified template file
+    -e, --[no-]edit       force edit of commit
+    --[no-]cleanup <mode> how to strip spaces and #comments from message
+    --[no-]status         include status in commit message template
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --[no-]all        commit all changed files
+    -i, --[no-]include    add specified files to index for commit
+    --[no-]interactive    interactively add files
+    -p, --[no-]patch      interactively add changes
+    -o, --[no-]only       commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --verify              opposite of --no-verify
+    --[no-]dry-run        show what would be committed
+    --[no-]short          show status concisely
+    --[no-]branch         show branch information
+    --[no-]ahead-behind   compute full ahead/behind values
+    --[no-]porcelain      machine-readable output
+    --[no-]long           show status in long format (default)
+    -z, --[no-]null       terminate entries with NUL
+    --[no-]amend          amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    --post-rewrite        opposite of --no-post-rewrite
+    -u, --[no-]untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git add file1
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git status
+On branch develop
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2
+
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git commit -m first-commit
+[develop (root-commit) 0f2c5fe] first-commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git add file2
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git commit -m second-commit
+[develop 4c802d0] second-commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git log --oneline
+4c802d0 (HEAD -> develop) second-commit
+0f2c5fe first-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git reset --hard HEAD~1
+HEAD is now at 0f2c5fe first-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git reflog show
+0f2c5fe (HEAD -> develop) HEAD@{0}: reset: moving to HEAD~1
+4c802d0 HEAD@{1}: commit: second-commit
+0f2c5fe (HEAD -> develop) HEAD@{2}: commit (initial): first-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git show
+commit 0f2c5fe22f7aa83dd141edec9b9602d42318f125 (HEAD -> develop)
+Author: bonniesimmer <noura19918@gmail.com>
+Date:   Mon Jul 28 14:26:45 2025 +0300
+
+    first-commit
+
+diff --git a/file1 b/file1
+new file mode 100644
+index 0000000..a29bdeb
+--- /dev/null
++++ b/file1
+@@ -0,0 +1 @@
++line1
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git reset --hard HEAD@{1}
+HEAD is now at 4c802d0 second-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git log --oneline
+4c802d0 (HEAD -> develop) second-commit
+0f2c5fe first-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git reflog
+4c802d0 (HEAD -> develop) HEAD@{0}: reset: moving to HEAD@{1}
+0f2c5fe HEAD@{1}: reset: moving to HEAD~1
+4c802d0 (HEAD -> develop) HEAD@{2}: commit: second-commit
+0f2c5fe HEAD@{3}: commit (initial): first-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git branch alpha
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git switch alpha
+Switched to branch 'alpha'
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha
+❯ echo line3 > file3
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha*
+❯ git add file3
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha*
+❯ git commit -m third-commit
+[alpha da8627e] third-commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha
+❯ git switch develop
+Switched to branch 'develop'
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ echo line4 > file4
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git add file4
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop*
+❯ git commit -m fourth-commit
+[develop 825cb8d] fourth-commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file4
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask develop
+❯ git switch alpha
+Switched to branch 'alpha'
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha
+❯ git log --oneline --decorate --all-graph
+fatal: unrecognized argument: --all-graph
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha
+❯ git log --oneline --decorate --all --graph
+* 825cb8d (develop) fourth-commit
+| * da8627e (HEAD -> alpha) third-commit
+|/  
+* 4c802d0 second-commit
+* 0f2c5fe first-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha
+❯ git rebase develop
+Successfully rebased and updated refs/heads/alpha.
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha
+❯ git log --oneline --decorate --all --graph
+* 030b326 (HEAD -> alpha) third-commit
+* 825cb8d (develop) fourth-commit
+* 4c802d0 second-commit
+* 0f2c5fe first-commit
+
+~/Courses/Fawry/Week_1/VersionControlSystemsTask alpha
+❯ 
